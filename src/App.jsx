@@ -7,7 +7,7 @@ import english_profeciency from '../src/assets/english_profeciency.png'
 import problem_solving from '../src/assets/problem_solving.jpg'
 import team_work from '../src/assets/team_work.webp'
 
-
+import Typewriter from "typewriter-effect";
 import { FaHtml5 } from 'react-icons/fa'
 import { IoLogoCss3 } from 'react-icons/io'
 import { RiTailwindCssFill } from 'react-icons/ri'
@@ -20,16 +20,16 @@ function App() {
 
   return (
     <>
-     <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">GOLAM<span className='text-orange-800 uppercase'> Mustafa</span></span>
           </a>
-          <button 
+          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            type="button" 
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" 
-            aria-controls="navbar-default" 
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
             aria-expanded={isMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
@@ -60,6 +60,22 @@ function App() {
         <div className='lg:flex md:flex  mx-auto py-12'>
           <div className='lg:w-1/3 pb-8 mx-auto'>
             <img src={myImage} alt="" />
+            <div className='text-3xl'>
+            <h1 className='text-orange-800 font-extrabold'>I'm a</h1>
+            <span className='text-orange-800 font-bold'>
+            <Typewriter 
+              options={{
+                strings: ['Web Developer','React Develper', 'Computer Science Educator'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+
+            </span>
+            
+
+            </div>
+            
           </div>
           <div className='text-2xl pl-8  font-bold lg:w-2/3'>
 
@@ -113,14 +129,14 @@ function App() {
           <div className='flex'>
 
             <div className='flex text-4xl lg:text-6xl md:text-5xl space-x-5 text-yellow-700 pl-6 mx-auto'>
-              
+
               <FaHtml5 />
               <IoLogoCss3 />
               <RiTailwindCssFill />
               <GrReactjs />
               <SiExpress />
               <SiMongodb />
-              
+
             </div>
           </div>
           {/* ------------------------- */}
@@ -150,11 +166,11 @@ function App() {
         {/* -------------------------- */}
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4'>
           <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <div className='h-48 overflow-hidden'>
+            <div className='h-48 overflow-hidden'>
               <img className="w-full h-full object-cover" src="../src/assets/event-management.jpg" alt="Event Management System" />
             </div>
             <div class="p-5 space-y-5">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Event Management System</h5>
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Event Management System</h5>
               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">**Secured authentication system ** Easy to use ** Booking system</p>
               <h1 className='text-left font-bold'>Technologies used:</h1>
               <p className='my-4'>*Reactjs, *mongodb, *expressjs, *tailwindcss</p>
@@ -172,11 +188,11 @@ function App() {
             </div>
           </div>
           <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <div className='h-48 overflow-hidden'>
-              <img class="rounded-t-lg h-full"  src="../src/assets/tourism_management.jpg" alt="" />
+            <div className='h-48 overflow-hidden'>
+              <img class="rounded-t-lg h-full" src="../src/assets/tourism_management.jpg" alt="" />
             </div>
-            <div class="p-5 space-y-5">        
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Explore Hub- A tourism</h5>
+            <div class="p-5 space-y-5">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Explore Hub- A tourism</h5>
               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">**Secured authentication system ** Easy to use ** Booking system</p>
               <h1 className='text-left font-bold'>Technologies used:</h1>
               <p className='my-4'>*Reactjs, *mongodb, *expressjs, *tailwindcss</p>
@@ -194,11 +210,11 @@ function App() {
             </div>
           </div>
           <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <div className='h-48 overflow-hidden'>
+            <div className='h-48 overflow-hidden'>
               <img class="rounded-t-lg" src="../src/assets/micro_work.jpg" alt="" />
             </div>
             <div class="p-5">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Quick Coin--A micro-task outsourcing platform</h5>
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Quick Coin--A micro-task outsourcing platform</h5>
               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">**Secured authentication system ** Payment system using stripe ** Functionality for earning coin</p>
               <h1 className='text-left font-bold'>Technologies used:</h1>
               <p className='my-4'>*Reactjs, *mongodb, *expressjs, *tailwindcss</p>
