@@ -176,8 +176,8 @@ function App() {
               <p className='my-4'>*Reactjs, *mongodb, *expressjs, *tailwindcss</p>
               <div className='flex space-x-6 pb-4'>
                 <h1 className='text-left font-bold'>Github Repository </h1>
-                <a className='text-blue-500' href='https://github.com/programming-hero-web-course1/b9a12-client-side-masudsw'>Client</a>
-                <a className='text-blue-500' href='https://github.com/programming-hero-web-course1/b9a12-server-side-masudsw'>Server</a>
+                <a className='text-blue-500' href='https://github.com/Porgramming-Hero-web-course/b9a11-client-side-masudsw'>Client</a>
+                <a className='text-blue-500' href='https://github.com/Porgramming-Hero-web-course/b9a11-server-side-masudsw'>Server</a>
               </div>
               <a href="https://event-managment-service.web.app" target='_blank' class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Explore more
@@ -198,8 +198,8 @@ function App() {
               <p className='my-4'>*Reactjs, *mongodb, *expressjs, *tailwindcss</p>
               <div className='flex space-x-6 pb-4'>
                 <h1 className='text-left font-bold'>Github Repository </h1>
-                <a className='text-blue-500' href='https://github.com/programming-hero-web-course1/b9a12-client-side-masudsw'>Client</a>
-                <a className='text-blue-500' href='https://github.com/programming-hero-web-course1/b9a12-server-side-masudsw'>Server</a>
+                <a className='text-blue-500' href='https://github.com/programming-hero-web-course-4/B9A10-client-side-masudsw'>Client</a>
+                <a className='text-blue-500' href='https://github.com/programming-hero-web-course-4/B9A10-server-side-masudsw'>Server</a>
               </div>
               <a href="https://explore-hub-80823.web.app/" target='_blank' class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Explore more
