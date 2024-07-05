@@ -189,7 +189,7 @@ function App() {
           </div>
           <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div className='h-48 overflow-hidden'>
-              <img class="rounded-t-lg h-full" src="https://i.ibb.co/nPPjM6B/Namibia.jpg" alt="" />
+              <img class="rounded-t-lg w-full h-full object-cover" src="https://i.ibb.co/nPPjM6B/Namibia.jpg" alt="" />
             </div>
             <div class="p-5 space-y-5">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Explore Hub- A tourism</h5>
@@ -211,7 +211,7 @@ function App() {
           </div>
           <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div className='h-48 overflow-hidden'>
-              <img class="rounded-t-lg" src="https://i.ibb.co/bN9XG2H/micro-task.png" alt="" />
+              <img class="rounded-t-lg w-full h-full object-cover" src="https://i.ibb.co/bN9XG2H/micro-task.png" alt="" />
             </div>
             <div class="p-5">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Quick Coin--A micro-task outsourcing platform</h5>
