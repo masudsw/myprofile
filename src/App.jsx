@@ -302,7 +302,7 @@ function App() {
         </div>
         <div className='lg:flex justify-between my-8'>
 
-          <div className='w-1/2'>
+          <div className='lg:w-1/2'>
 
             <h1 className='text-2xl my-5'>Please send me a message:</h1>
             <form ref={form} id="contactForm" onSubmit={sendEmail}>
@@ -337,7 +337,7 @@ function App() {
               </div>
             </form>
           </div>
-          <div className='w-1/2'>
+          <div className='lg:w-1/2 pt-8'>
 
             <h1>My phone number:<span className='text-orange-900 font-extrabold tracking-wider '>+880 1856316525</span> </h1>
             <h1>My email address:<span className='text-orange-900 font-extrabold tracking-widest'> GolamMustafa@gmail.com</span></h1>
