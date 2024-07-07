@@ -6,20 +6,47 @@ import communication_skills from '../src/assets/communication_skills.jpg'
 import english_profeciency from '../src/assets/english_profeciency.png'
 import problem_solving from '../src/assets/problem_solving.jpg'
 import team_work from '../src/assets/team_work.webp'
-
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 import Typewriter from "typewriter-effect";
 import { FaHtml5 } from 'react-icons/fa'
 import { IoLogoCss3 } from 'react-icons/io'
 import { RiTailwindCssFill } from 'react-icons/ri'
 import { GrReactjs } from 'react-icons/gr'
 import { SiExpress, SiMongodb } from 'react-icons/si'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 function App() {
+  const form = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_ds2uwsj',
+        'template_pu5jbcc',
+
+        form.current, {
+        publicKey: "jyyY1vkDZVLT9wM7z",
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          toast.success('Message sent successfully!')
+          form.current.reset();  // Reset the form after successful submission
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
 
   return (
     <>
+      <Toaster />
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -61,21 +88,21 @@ function App() {
           <div className='lg:w-1/3 pb-8 mx-auto'>
             <img src={myImage} alt="" />
             <div className='text-3xl'>
-            <h1 className='text-orange-800 font-extrabold'>I'm a</h1>
-            <span className='text-orange-800 font-bold'>
-            <Typewriter 
-              options={{
-                strings: ['Web Developer','React Develper', 'Computer Science Educator'],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+              <h1 className='text-orange-800 font-extrabold'>I'm a</h1>
+              <span className='text-orange-800 font-bold'>
+                <Typewriter
+                  options={{
+                    strings: ['Web Developer', 'React Develper', 'Computer Science Educator'],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
 
-            </span>
-            
+              </span>
+
 
             </div>
-            
+
           </div>
           <div className='text-2xl pl-8  font-bold lg:w-2/3'>
 
@@ -128,7 +155,7 @@ function App() {
           <h1 className='text-center font-bold uppercase my-8'>Hard Skills</h1>
           <div className='flex'>
 
-            <div className='flex text-4xl lg:text-6xl md:text-5xl space-x-5 text-yellow-700 pl-6 mx-auto'>
+            <div className='flex text-3xl lg:text-6xl md:text-5xl space-x-2 lg:space-x-5 md:space-x-4 text-yellow-700 lg:pl-6 mx-auto'>
 
               <FaHtml5 />
               <IoLogoCss3 />
@@ -169,9 +196,15 @@ function App() {
             <div className='h-48 overflow-hidden'>
               <img className="w-full h-full object-cover" src="https://i.ibb.co/Wk2mcDK/event-plan.jpg" alt="Event Management System" />
             </div>
-            <div class="p-5 space-y-5">
+            <div class="p-5 space-y-9">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Event Management System</h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">**Secured authentication system ** Easy to use ** Booking system</p>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <ul className='list-disc text-left'>
+                  <li>Event management provider can provide detail information.</li>
+                  <li>Service taker can search event management provider and book an event.</li>
+                  <li>Excelent user interface.</li>
+                </ul>
+              </p>
               <h1 className='text-left font-bold'>Technologies used:</h1>
               <p className='my-4'>*Reactjs, *mongodb, *expressjs, *tailwindcss</p>
               <div className='flex space-x-6 pb-4'>
@@ -189,11 +222,17 @@ function App() {
           </div>
           <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div className='h-48 overflow-hidden'>
-              <img class="rounded-t-lg w-full h-full object-cover" src="https://i.ibb.co/nPPjM6B/Namibia.jpg" alt="" />
+              <img class="rounded-t-lg w-full h-full object-cover" src="https://i.ibb.co/yBMQnv5/Pyramids-of-Giza-Egypt.webp" alt="" />
             </div>
-            <div class="p-5 space-y-5">
+            <div class="p-5 space-y-10">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Explore Hub- A tourism</h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">**Secured authentication system ** Easy to use ** Booking system</p>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <ul className='list-disc text-left'>
+                  <li>Tourist service provider can provide information about torist spots for the custor.</li>
+                  <li>Customer can view, search and book the tourist spots.</li>
+                </ul>
+
+              </p>
               <h1 className='text-left font-bold'>Technologies used:</h1>
               <p className='my-4'>*Reactjs, *mongodb, *expressjs, *tailwindcss</p>
               <div className='flex space-x-6 pb-4'>
@@ -215,7 +254,16 @@ function App() {
             </div>
             <div class="p-5">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Quick Coin--A micro-task outsourcing platform</h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">**Secured authentication system ** Payment system using stripe ** Functionality for earning coin</p>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <ul className='list-disc text-left'>
+                  <li>Job Creator: Post micro jobs and assign coin rewards. Purchase coins via Stripe and review/accept workers' submissions.</li>
+                  <li>Worker: Browse and complete jobs, submit work, and communicate with job creators. Earn coins upon job approval.</li>
+                  <li>Admin: Manage users, monitor transactions, and ensure platform compliance and smooth operation.</li>
+                </ul>
+
+
+
+              </p>
               <h1 className='text-left font-bold'>Technologies used:</h1>
               <p className='my-4'>*Reactjs, *mongodb, *expressjs, *tailwindcss</p>
               <div className='flex space-x-6 pb-4'>
@@ -252,14 +300,57 @@ function App() {
           <span className="flex-shrink mx-4 text-gray-700 text-4xl mx-auto uppercase font-bold my-4">Contact with me</span>
           <div className="flex-grow border-t border-gray-400"></div>
         </div>
-        <h1>My phone number:<span className='text-orange-900 font-extrabold tracking-wider '>+880 1856316525</span> </h1>
-        <h1>My email address:<span className='text-orange-900 font-extrabold tracking-widest'> GolamMustafa@gmail.com</span></h1>
-        <h1>My address</h1>
-        <address className='tracking-widest text-orange-800'>
-          Daudkandi,
-          Cumilla,
-          Bangladesh.
-        </address>
+        <div className='lg:flex justify-between my-8'>
+
+          <div className='w-1/2'>
+
+            <h1 className='text-2xl my-5'>Please send me a message:</h1>
+            <form ref={form} id="contactForm" onSubmit={sendEmail}>
+              <div class="mb-6">
+                <div class="mx-0 mb-1 sm:mb-4">
+                  <div class="mx-0 mb-1 sm:mb-4">
+                    <label for="name" class="pb-1 text-xs uppercase tracking-wider"></label>
+                    <input type="text" id="name" autocomplete="given-name"
+                      placeholder="Your name"
+                      class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                      name="user_name" />
+
+                  </div>
+                  <div class="mx-0 mb-1 sm:mb-4">
+                    <label for="email" class="pb-1 text-xs uppercase tracking-wider"></label>
+                    <input type="email" id="email" autocomplete="email"
+                      placeholder="Your email address"
+                      class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                      name="user_email" />
+                  </div>
+                </div>
+                <div class="mx-0 mb-1 sm:mb-4">
+                  <label for="textarea" class="pb-1 text-xs uppercase tracking-wider"></label>
+                  <textarea id="message" name="message" cols="30" rows="5"
+                    placeholder="Write your message..."
+                    class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0">
+                  </textarea>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
+              </div>
+            </form>
+          </div>
+          <div className='w-1/2'>
+
+            <h1>My phone number:<span className='text-orange-900 font-extrabold tracking-wider '>+880 1856316525</span> </h1>
+            <h1>My email address:<span className='text-orange-900 font-extrabold tracking-widest'> GolamMustafa@gmail.com</span></h1>
+            <h1>My address</h1>
+            <address className='tracking-widest text-orange-800'>
+              Daudkandi,
+              Cumilla,
+              Bangladesh.
+            </address>
+
+          </div>
+        </div>
+
       </section>
       <section>
         <footer class="bg-white dark:bg-gray-900">
